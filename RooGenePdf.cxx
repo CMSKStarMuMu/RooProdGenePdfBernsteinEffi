@@ -90,19 +90,6 @@ Double_t RooGenePdf::evaluate() const
   double sinx  =  sqrt(sinxq);
   
 
-//folded  
-//   double pdf = 9./(8.*TMath::Pi())*(2./3.*(F_S+A_S*y)*(1-x*x)+A5S*sqrt(1-y*y)*sqrt(1-x*x)*TMath::Cos(z))+ 
-//   (1.-F_S)*(2.*F_L*y*y*(1-x*x)+0.5*(1.-F_L)*(1-y*y)*(1.+x*x)+0.5*P_1*(1.-F_L)*(1-y*y)*(1-x*x)*TMath::Cos(2*z)+ 
-//    2*P5p*y*sqrt(F_L*(1.-F_L))*sqrt(1-y*y)*sqrt(1-x*x)*TMath::Cos(z));
-
-
-// Mauro's  
-//   double pdf = 9./(32.*TMath::Pi())*(3./4.*F_T*sinyq+F_L*cosyq+\
-//   (1./4.*F_T*sinyq-F_L*cosyq)*cos2x+0.5*P_1*F_T*sinyq*sinxq*TMath::Cos(2.*z)+\
-//   sqrt(F_L*F_T)*TMath::Cos(z)*(0.5*P4p*sin2y*sin2x+P5p*sin2y*sinx)-\
-//   sqrt(F_L*F_T)*TMath::Sin(z)*(P6p*sin2y*sinx-0.5*P8p*sin2y*sin2x)+\
-//   2.*P_2*F_T*sinyq*x-P_3*F_T*sinyq*sinxq*TMath::Sin(2.*z));
-// 
 //
   double pdf = 9./(32.*TMath::Pi())*(3./4.*F_T*sinyq+F_L*cosyq+\
   (1./4.*F_T*sinyq-F_L*cosyq)*cos2x+0.5*P_1*F_T*sinyq*sinxq*TMath::Cos(2.*z)+\
@@ -111,14 +98,6 @@ Double_t RooGenePdf::evaluate() const
   2.*P_2*F_T*sinyq*x-P_3*F_T*sinyq*sinxq*TMath::Sin(2.*z));
 //
 
-// 
-//    double pdf = 9./(32.*TMath::Pi())*(3./4.*F_T*sinyq+F_L*cosyq+
-//    (1./4.*F_T*sinyq-F_L*cosyq)*cos2x+0.5*P_1*F_T*sinyq*sinxq*TMath::Cos(2.*z)+
-//     sqrt(F_L*F_T)*TMath::Cos(z)*P5p*sin2y*sinx);
-//
-
-// double pdf =(2.*F_L*y*y*sinxq+0.5*F_T*sinyq*sinxq+0.5*P_1*F_T*sinyq*sinxq*TMath::Cos(2*z)+ 
-//              P5p*sqrt(F_L*F_T)*sin2y*sinx*TMath::Cos(z));
   return pdf;
   
 } 
@@ -126,25 +105,3 @@ Double_t RooGenePdf::evaluate() const
 
 
  
-// Int_t RooGenePdf::getAnalyticalIntegral(RooArgSet& allVars, RooArgSet& analVars, const char* /*rangeName*/) const
-// {
-//   if       (matchArgs(allVars, analVars, _x,_y,_z)){
-//    std::cout<<"getAnalyticalIntegral==1: Analytic integral over x y z"<<std::endl;
-//    return 1;
-//   }else if (matchArgs(allVars, analVars, _y,_z)){
-//    std::cout<<"getAnalyticalIntegral==2: Analytic integral over y z"<<std::endl;
-//    return 2;
-//   }else if (matchArgs(allVars, analVars, _x,_z)){
-//    std::cout<<"getAnalyticalIntegral==3: Analytic integral over x z"<<std::endl;
-//    return 3;
-//   }else if (matchArgs(allVars, analVars, _x,_y)){
-//    std::cout<<"getAnalyticalIntegral==4: Analytic integral over x y"<<std::endl;
-//    return 4;
-//   }else{  
-//    std::cout << "Error in RooGenePdf::analyticalIntegral" << std::endl;
-//    return 0;
-//   } 
-// }
-// Double_t RooGenePdf::analyticalIntegral(Int_t code, const char* rangeName) const
-// {
-// }

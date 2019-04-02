@@ -3,7 +3,7 @@
 //*  test code to compare efficiency projection and fit parametrization         *
 //*  using RooBernsteinClass.                                                   *
 //*                                                                             *
-//*  P.Dini fecit, Anno Domini MMXVIII                                          *
+//*  P.Dini fecit, Anno Domini MMXIX                                          *
 //*                                                                             *
 //*******************************************************************************
 
@@ -69,12 +69,10 @@ std::map<std::string, std::string>  ReadNamelist(int argc, char** argv);
 char InputRecoB0TreeName[10]	= "ntuple";
 char OutputRecoB0TreeName[10]	= "ntuple";
 char InputFileNameMCReco[300]   = "2016MC_LMNR_addmumukMass.root";
-char eosRecoDir[100] = "/eos/cms/store/user/fiorendi/p5prime/2016/skims/";
-char eosGeneDir[100] = "/eos/cms/store/user/fiorendi/p5prime/2016/skims/GEN/";
-// char RecoDir[100]    =  ".";
-// char GeneDir[100]    =  ".";
-char RecoDir[100]    =  "finalNtuples";
-char GeneDir[100]    =  "GEN_NoFilter";
+char eosRecoDir[100] = "/eos/cms/store/user/fiorendi/p5prime";
+char eosGeneDir[100] = "/eos/cms/store/user/fiorendi/p5prime";
+char RecoDir[100]    =  "/afs/cern.ch/user/d/dini/public/finalNtuples";
+char GeneDir[100]    =  "";
 
 
 double SetIntPrecisionAbs = 1e-7;
