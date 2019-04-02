@@ -3,7 +3,9 @@ testGeneReFit <= Usage: ./testGeneReFit    [Q2Bin]    [where QBin2=0,1,2,3,5,7,8
 
             This program: 
 	    
-		- contains a full example of the use of the efficiency class RooProdGenePdfBernsteinEffi (efficiency X P-Wave) in roofit 
+		- contains a full example of the use of the efficiency class RooProdGenePdfBernsteinEffi 
+		
+		- RooProdGenePdfBernsteinEffi compute the product of efficiency X P-Wave, using pre-computed integrals for the normalisation
 
 		- reads the RECO events 2016 from a flat ntupla provided by using the last BDT;
 		
