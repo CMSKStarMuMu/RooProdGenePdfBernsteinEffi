@@ -21,3 +21,4 @@ saveEffiGeneReFit <= Usage: ./saveEffiGeneReFit    [Q2Bin]    [where QBin2=0,1,2
 	    
 		- produces the output file testGeneReFit-2016-Q2Bin-[Q2Bin]-Bins-[n. bins CosL]-[n. bins CosK]-[n. bins Phi]-BernDeg-[max1]-[max2]-[max3]-integraBin.root, with a the canvas "ClosurePlots" where are stored the projections of the reco distribution and, superimposed in red, the fit.  
 		 
+testGeneReFitComputeNormProd <= Usage: ./testGeneReFitComputeNormProd [Q2Bin]    [where QBin2=0,1,2,3,5,7,8]
