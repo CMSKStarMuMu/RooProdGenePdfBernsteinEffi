@@ -1,5 +1,5 @@
 # RooProdGenePdfBernsteinEffi
-saveGeneReFit <= Usage: ./saveGeneReFit    [Q2Bin]    [where QBin2=0,1,2,3,5,7,8]
+saveEffiGeneReFit <= Usage: ./saveEffiGeneReFit    [Q2Bin]    [where QBin2=0,1,2,3,5,7,8]
 
             This program: 
 	    
